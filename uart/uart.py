@@ -1,3 +1,8 @@
+import serial
+import time
+
+
+#  My custom uart class
 class MyUart:
     def __init__(self, port):
         self.port = port
