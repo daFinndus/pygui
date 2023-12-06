@@ -95,11 +95,13 @@ class Ui_PyGUI(object):
         self.pushButton.setText(_translate("PyGUI", "Update"))
         self.pushButton_2.setText(_translate("PyGUI", "Start"))
         self.pushButton_3.setText(_translate("PyGUI", "Stop"))
-        self.menuApplication_by_Darren_Jonas_and_Finn.setTitle(_translate("PyGUI", "Application by Darren, Jonas and Finn"))
+        self.menuApplication_by_Darren_Jonas_and_Finn.setTitle(
+            _translate("PyGUI", "Application by Darren, Jonas and Finn"))
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     PyGUI = QtWidgets.QMainWindow()
     ui = Ui_PyGUI()
