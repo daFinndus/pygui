@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>393</width>
+    <width>400</width>
     <height>288</height>
    </rect>
   </property>
@@ -38,7 +38,7 @@
     <property name="checkable">
      <bool>false</bool>
     </property>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="temperature_ouput">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -83,7 +83,7 @@
     <property name="title">
      <string>Parameterization</string>
     </property>
-    <widget class="QComboBox" name="comboBox">
+    <widget class="QComboBox" name="comboBox_temp_unit">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -108,7 +108,7 @@
       </property>
      </item>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="sampling_time_input">
      <property name="geometry">
       <rect>
        <x>190</x>
@@ -144,8 +144,12 @@
       <string>Unit of temperature</string>
      </property>
     </widget>
+    <zorder>sampling_time_input</zorder>
+    <zorder>label_2</zorder>
+    <zorder>label_3</zorder>
+    <zorder>comboBox_temp_unit</zorder>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="button_update">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -158,7 +162,7 @@
      <string>Update</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="button_start">
     <property name="geometry">
      <rect>
       <x>140</x>
@@ -171,7 +175,7 @@
      <string>Start</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="button_stop">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -186,16 +190,16 @@
    </widget>
    <zorder>groupBox_2</zorder>
    <zorder>groupBox</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>pushButton_3</zorder>
+   <zorder>button_update</zorder>
+   <zorder>button_start</zorder>
+   <zorder>button_stop</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>393</width>
+     <width>400</width>
      <height>21</height>
     </rect>
    </property>
