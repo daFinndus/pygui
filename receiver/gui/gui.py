@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_PyGUI(object):
     def setupUi(self, PyGUI):
         PyGUI.setObjectName("PyGUI")
-        PyGUI.resize(400, 288)
+        PyGUI.resize(400, 296)
         self.centralwidget = QtWidgets.QWidget(PyGUI)
         self.centralwidget.setObjectName("centralwidget")
         self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
@@ -26,6 +26,7 @@ class Ui_PyGUI(object):
         self.groupBox.setObjectName("groupBox")
         self.temperature_ouput = QtWidgets.QLineEdit(self.groupBox)
         self.temperature_ouput.setGeometry(QtCore.QRect(190, 30, 151, 20))
+        self.temperature_ouput.setText("")
         self.temperature_ouput.setReadOnly(True)
         self.temperature_ouput.setClearButtonEnabled(False)
         self.temperature_ouput.setObjectName("temperature_ouput")
@@ -93,22 +94,10 @@ class Ui_PyGUI(object):
         self.groupBox_2.setTitle(_translate("PyGUI", "Parameterization"))
         self.comboBox_temp_unit.setItemText(0, _translate("PyGUI", "Kelvin [ K ]"))
         self.comboBox_temp_unit.setItemText(1, _translate("PyGUI", "Celsius [ °C ]"))
-        self.comboBox_temp_unit.setItemText(2, _translate("PyGUI", "Fahrenheit [°F ]"))
+        self.comboBox_temp_unit.setItemText(2, _translate("PyGUI", "Fahrenheit [ °F ]"))
         self.label_2.setText(_translate("PyGUI", "Sampling time in ms"))
         self.label_3.setText(_translate("PyGUI", "Unit of temperature"))
         self.button_update.setText(_translate("PyGUI", "Update"))
         self.button_start.setText(_translate("PyGUI", "Start"))
         self.button_stop.setText(_translate("PyGUI", "Stop"))
-        self.menuApplication_by_Darren_Jonas_and_Finn.setTitle(
-            _translate("PyGUI", "Application by Darren, Jonas and Finn"))
-
-
-if __name__ == "__main__":
-    import sys
-
-    app = QtWidgets.QApplication(sys.argv)
-    PyGUI = QtWidgets.QMainWindow()
-    ui = Ui_PyGUI()
-    ui.setupUi(PyGUI)
-    PyGUI.show()
-    sys.exit(app.exec_())
+        self.menuApplication_by_Darren_Jonas_and_Finn.setTitle(_translate("PyGUI", "Temperature Application"))
