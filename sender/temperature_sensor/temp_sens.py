@@ -21,7 +21,6 @@ class TempSensor:
 
         # Convert the ADC value to a voltage
         self.voltage_measurements = float(self.raw_data) / 32767.0 * 4.095
-        print(self.voltage_measurements)
 
         temp = np.log((10000 / self.voltage_measurements) * (3.3 - self.voltage_measurements))
         temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * np.power(temp, 2))) * temp)
