@@ -5,6 +5,8 @@ from uart import MyUart
 from ui.gui import Ui_PyGUI
 from ui.gui_functions import Functions_PyGUI
 
+print("The receiver is now running!")
+
 
 # Function to receive data from the sender
 def data_receiver(uart, gui):
@@ -15,12 +17,12 @@ def data_receiver(uart, gui):
         if data:
             try:
                 float_data = float(data)  # Attempt to convert the sliced string to float
-                print(float_data)
+                print(f"Received temperature value: {float_data} K")
                 gui.update_temp_value(float_data)  # Update GUI with the new value
             except ValueError as e:
                 print(f"Error converting data to float: {e}")
         else:
-            print("Currenctly receiving no data from the sender!")
+            pass
 
 
 if __name__ == "__main__":

@@ -1,3 +1,5 @@
+import time
+
 import Adafruit_ADS1x15
 import numpy as np
 import math
@@ -11,17 +13,20 @@ class TempSensor:
         self.voltage_measurements = None
         self.gain = gain  # Set the gain to 1
         self.samples_per_second = samples_per_second  # Set the samples per second to 64
+        self.sampling_time = 1000  # This is the delay between each sample in milliseconds
         self.xs = []  # Create empty lists for our x values
         self.ys = []  # Create empty lists for our y values
 
     # Function to measure the temperature
     def measure_temp(self):
+        time.sleep(self.sampling_time / 1000)  # Our sampling time in seconds
         # Read the ADC
         self.raw_data = self.adc.read_adc(self.adc_channel, self.gain, self.samples_per_second)
 
         # Convert the ADC value to a voltage
         self.voltage_measurements = float(self.raw_data) / 32767.0 * 4.095
 
+        # Calculate our temperature
         temp = np.log((10000 / self.voltage_measurements) * (3.3 - self.voltage_measurements))
         temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * np.power(temp, 2))) * temp)
 
